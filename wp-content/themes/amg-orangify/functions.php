@@ -211,14 +211,6 @@ function twentyfifteen_scripts() {
 	/* AMG Orangify ************************************************************************************/
 
 	/**
-	 * Add Prometheus.
-	 *
-	 * @since AMG Orangify 1.0
-	 */
-
-	require_once( ABSPATH . 'prometheus/prometheus.php' );
-
-	/**
 	 * Enqueue Less Stylesheets
 	 *
 	 * @since AMG Orangify 1.0
