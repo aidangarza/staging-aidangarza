@@ -34,6 +34,32 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 660;
 }
 
+/* AMG Orangify ************************************************************************************/
+
+/**
+ * Add Prometheus.
+ *
+ * @since AMG Orangify 1.0
+ */
+require_once( 'prometheus/prometheus.php' );
+
+/**
+ * Enqueue Less Stylesheets
+ *
+ * @since AMG Orangify 1.0
+ */
+function amg_less() {
+ 
+     if ( ! is_admin() ) {
+          wp_enqueue_style( 'master', get_stylesheet_directory_uri() . '/less/master.less', null, '1.0');
+     }
+ 
+}
+ 
+add_action('wp_enqueue_scripts', 'amg_less');
+
+/****************************************************************************************************/
+
 /**
  * Twenty Fifteen only works in WordPress 4.1 or later.
  */
