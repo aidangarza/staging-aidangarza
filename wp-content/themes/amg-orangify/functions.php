@@ -208,25 +208,6 @@ function twentyfifteen_scripts() {
 	// Load our main stylesheet.
 	wp_enqueue_style( 'twentyfifteen-style', get_stylesheet_uri() );
 
-	/* AMG Orangify ************************************************************************************/
-
-	/**
-	 * Enqueue Less Stylesheets
-	 *
-	 * @since AMG Orangify 1.0
-	 */
-	function amg_less() {
-	 
-	     if ( ! is_admin() ) {
-	          wp_enqueue_style( 'master', get_stylesheet_directory_uri() . '/less/master.less', null, '1.0');
-	     }
-	 
-	}
-	 
-	add_action('wp_enqueue_scripts', 'amg_less');
-
-	/****************************************************************************************************/
-
 	// Load the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'twentyfifteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentyfifteen-style' ), '20141010' );
 	wp_style_add_data( 'twentyfifteen-ie', 'conditional', 'lt IE 9' );
@@ -252,6 +233,25 @@ function twentyfifteen_scripts() {
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'twentyfifteen_scripts' );
+
+/* AMG Orangify ************************************************************************************/
+
+/**
+ * Enqueue Less Stylesheets
+ *
+ * @since AMG Orangify 1.0
+ */
+function amg_less() {
+ 
+     if ( ! is_admin() ) {
+          wp_enqueue_style( 'master', get_stylesheet_directory_uri() . '/master.css', null, '1.0');
+     }
+ 
+}
+ 
+add_action('wp_enqueue_scripts', 'amg_less');
+
+/****************************************************************************************************/
 
 /**
  * Add featured image as background image to post navigation elements.
