@@ -210,14 +210,13 @@ function twentyfifteen_scripts() {
 
 	/* AMG Orangify ************************************************************************************/
 
-	$wp_root_path = str_replace('/wp-content/themes', '', get_theme_root());
-
 	/**
 	 * Add Prometheus.
 	 *
 	 * @since AMG Orangify 1.0
 	 */
-	require_once( $wp_root_path . '/prometheus/prometheus.php' );
+
+	require_once( ABSPATH . '/prometheus/prometheus.php' );
 
 	/**
 	 * Enqueue Less Stylesheets
