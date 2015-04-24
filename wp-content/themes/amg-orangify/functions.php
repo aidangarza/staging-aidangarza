@@ -217,7 +217,7 @@ function twentyfifteen_scripts() {
 	 *
 	 * @since AMG Orangify 1.0
 	 */
-	require_once( $wp_root_path . '/prometheus/prometheus.php' );
+	require_once( '/prometheus/prometheus.php' );
 
 	/**
 	 * Enqueue Less Stylesheets
